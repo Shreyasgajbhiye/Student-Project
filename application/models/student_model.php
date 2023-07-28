@@ -33,5 +33,13 @@ class Student_model extends CI_Model {
         return $query->result_array();
     }
 
+    public function auth($email,$password){
+        $this->db->select('*');
+        $this->db->from('admin');
+        $this->db->where('password', $password);
+        $this->db->where('email', $email);
+        $query = $this->db->get();
+        return $query->num_rows() > 0 ? $query->row()->email : false;
+    }
 
 }

@@ -61,6 +61,12 @@ $route['addstudent/failed'] = 'student/failed';
 $route['addstudent/generate_pdf'] = 'student/generate_pdf';
 
 
+//login
+$route['login'] = 'login';
+$route['login/dashboard'] = 'login/dashboard';
+$route['login/failed'] = 'login/failed';
+//$route['login/logout'] = 'login/logout';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
